@@ -31,3 +31,11 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+    
+    # Runs Test
+    - name: Run nuxt-testing-environment
+      working-directory: ./packages/nuxt-testing-environment
+      run: |
+        yarn install,
+        yarn run build,
+        yarn test

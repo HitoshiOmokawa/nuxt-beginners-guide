@@ -36,6 +36,4 @@ jobs:
     - name: Run nuxt-testing-environment
       working-directory: ./packages/nuxt-testing-environment
       run: |
-        yarn install,
-        yarn run build,
         yarn test

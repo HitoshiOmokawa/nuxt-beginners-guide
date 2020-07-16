@@ -36,5 +36,5 @@ jobs:
     - name: Run nuxt-testing-environment
       working-directory: ./packages/nuxt-testing-environment
       run: |
-        
+        yarn add -D jest
         yarn test

@@ -5,6 +5,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
 # Nuxt.js beginners guide examples
+# test
 
 This is supported repository to Nuxt.js beginners guide(published by C&R Institute, author: @potato4d).
 

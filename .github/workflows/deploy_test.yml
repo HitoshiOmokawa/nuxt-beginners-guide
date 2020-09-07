@@ -35,5 +35,5 @@ jobs:
           # ssh接続
           # ssh -oStrictHostKeyChecking=no ${USER}@${HOST} -i secret_key "ls -lrt"
           # ssh接続してrsyncのdry-runをする
-          rsync -ahbvcO --delete --exclude-from .rsyncignore -e "ssh -i secret_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" ./packages/ ${USER}@${HOST}:/home/ec2-user/test/
+          rsync -ahbvcO --delete --exclude-from .rsyncignore --backup --backup-dir="${USER}@${HOST}:/home/ec2-user/backup/" -e "ssh -i secret_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" ./packages/ ${USER}@${HOST}:/home/ec2-user/test/
           

@@ -35,5 +35,5 @@ jobs:
           # ssh接続
           ssh -oStrictHostKeyChecking=no ${USER}@${HOST} -i secret_key "ls -lrt"
           # ssh接続してrsyncのdry-runをする
-          ssh -oStrictHostKeyChecking=no ${USER}@${HOST} -i secret_key "rsync -ahbvncO --delete / /home/ec2-user/test/"
+          ssh -oStrictHostKeyChecking=no ${USER}@${HOST} -i secret_key "rsync -ahbvncO --delete /home/runner/work/nuxt-beginners-guide/nuxt-beginners-guide/ /home/ec2-user/test/"
 

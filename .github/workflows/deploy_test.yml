@@ -33,7 +33,7 @@ jobs:
           # ローカルの情報確認
           ls -lrt
           # ssh接続
-          ssh -oStrictHostKeyChecking=no ${USER}@${HOST} -i secret_key "ls -lrt"
+          #ssh -oStrictHostKeyChecking=no ${USER}@${HOST} -i secret_key "ls -lrt"
           # ssh接続してrsyncのdry-runをする
-          rsync -ahbvncO --delete ”ssh -i secret_key -o StrictHostKeyChecking=no” ./ ${USER}@${HOST}:/home/ec2-user/test/
+          rsync -ahbvncO --delete ”ssh -i secret_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null” ./ $USER@$HOST:/home/ec2-user/test/
 

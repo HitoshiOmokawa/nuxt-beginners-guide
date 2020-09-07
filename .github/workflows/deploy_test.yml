@@ -30,6 +30,10 @@ jobs:
           echo "$SECRET_KEY" > secret_key
           # パー民ッションの変更
           chmod 600 secret_key
+          # ローカルの情報確認
+          ls -lrt
           # ssh接続
           ssh -oStrictHostKeyChecking=no ${USER}@${HOST} -i secret_key "ls -lrt"
+          # ssh接続してrsyncのdry-runをする
+          ssh -oStrictHostKeyChecking=no ${USER}@${HOST} -i secret_key "rsync -ahbvncO --delete / /home/ec2-user/test/"
 

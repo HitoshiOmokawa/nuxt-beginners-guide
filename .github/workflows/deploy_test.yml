@@ -35,5 +35,5 @@ jobs:
           # ssh接続
           # ssh -oStrictHostKeyChecking=no ${USER}@${HOST} -i secret_key "ls -lrt"
           # ssh接続してrsyncのdry-runをする
-          rsync -ahbvncO -e "ssh -i secret_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" ./docs/ ${USER}@${HOST}:/home/ec2-user/test/
+          rsync -ahbvcO -e "ssh -i secret_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" ./packages/ ${USER}@${HOST}:/home/ec2-user/test/
           
